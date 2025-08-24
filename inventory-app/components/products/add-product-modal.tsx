@@ -44,7 +44,7 @@ export function AddProductModal({ children, onProductAdded }: AddProductModalPro
 const token = localStorage.getItem("token");
 
   try {
-    const response = await fetch("http://localhost:5000/products", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify(productData),
