@@ -32,7 +32,7 @@ export function ProductsTable({ products, onProductDeleted }: ProductsTableProps
 
     setDeletingId(productId)
     try {
-      const response = await fetch(`http://localhost:5000/products/${productId}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${productId}`, {
         method: "DELETE",
       })
       if (response.ok) {
