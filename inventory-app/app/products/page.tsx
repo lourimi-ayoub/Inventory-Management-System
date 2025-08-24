@@ -99,7 +99,7 @@ export default function InventoryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-[calc(100vh-72px)] bg-gray-50">
       <div className="max-w-7xl mx-auto p-6">
         <InventoryHeader onProductAdded={handleProductAdded} />
 
