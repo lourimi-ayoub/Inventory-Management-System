@@ -66,7 +66,7 @@ useEffect(() => {
   if (!user) return null; 
 
   return (
-    <div className="p-10 bg-gray-50">
+    <div className="p-10 min-h-[calc(100vh-72px)] bg-gray-50">
       <h1 className="text-2xl font-bold">Welcome, {user.name}!🙋‍♂️ </h1>
       <p className="text-sm text-muted-foreground">
           this is isisisisiii  
