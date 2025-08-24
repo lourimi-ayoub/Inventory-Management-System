@@ -62,7 +62,7 @@ export default function InventoryPage() {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("Not logged in");
 
-      const res = await fetch("http://localhost:5000/stockMovements", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stockMovements`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -146,7 +146,7 @@ export default function InventoryPage() {
       }
 
       // Update product stock
-      await fetch(`http://localhost:5000/products/${selectedProduct._id}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${selectedProduct._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -165,7 +165,7 @@ export default function InventoryPage() {
         date: new Date().toISOString(),
       };
 
-      await fetch("http://localhost:5000/stockMovements", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stockMovements`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
