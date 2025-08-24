@@ -39,7 +39,7 @@ useEffect(() => {
  const fetchProducts = useCallback(async () => {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch("`${process.env.NEXT_PUBLIC_API_URL}/products`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
