@@ -27,7 +27,7 @@ export default function InventoryPage() {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("Not logged in");
 
-      const response = await fetch("http://localhost:5000/products?limit=100", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products?limit=100`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
