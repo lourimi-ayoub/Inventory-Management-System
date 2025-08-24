@@ -25,9 +25,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClientNavbar />  {/* ✅ navbar logic now inside client component */}
-        {children}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground min-h-screen`}
+      >
+        <ClientNavbar />
+        <main className="flex-1 w-full mx-auto">{children}</main>
       </body>
     </html>
   );
